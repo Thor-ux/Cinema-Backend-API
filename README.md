@@ -7,13 +7,10 @@ A Django REST Framework–based backend for a cinema booking system. This projec
 ## 🚀 Features
 
 * Movies API (DRF)
-* Sessions (Movie → Hall → Seats)
 * Seat availability & locking logic
 * Auth-protected bookings
 * Admin dashboard
 * PostgreSQL database
-* Ready for deployment with Gunicorn + Nginx
-
 ---
 
 ## 🧱 Tech Stack
@@ -31,7 +28,6 @@ A Django REST Framework–based backend for a cinema booking system. This projec
 backend/
 ├── cinema/          # Project settings & root URLs
 ├── movies/          # Movies app
-├── sessions/        # Movie sessions
 ├── halls/           # Cinema halls & seats
 ├── bookings/        # Ticket bookings
 ├── users/           # Custom user model
@@ -46,7 +42,7 @@ backend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/cinema-backend.git
+git clone https://github.com/Thor-ux/Cinema-Backend-API.git
 cd cinema-backend/backend
 ```
 
@@ -81,8 +77,8 @@ python manage.py runserver
 
 Visit:
 
-* API: [http://IP.mydomain.com/](http:// Use IP or mydomain.com/)
-* Admin: [http://IP.mydomain.com/admin/](http://Use IP or mydomain.com/admin/)
+* API: [http://USEIPOR.mydomain.com/](http://USEIPOR.mydomain.com/)
+* Admin: [http://USEIPOR.mydomain.com/admin/](http://USEIPOR.mydomain.com/admin/)
 
 ---
 
