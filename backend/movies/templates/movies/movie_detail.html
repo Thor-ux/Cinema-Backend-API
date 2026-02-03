@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ movie.title }}</title>
+</head>
+<body>
+
+<h1>{{ movie.title }}</h1>
+<p>{{ movie.description }}</p>
+
+<h2>🕒 Showtimes</h2>
+
+<ul>
+{% for showtime in showtimes %}
+    <li>
+        {{ showtime.start_time }} —
+        Hall: {{ showtime.hall.name }} —
+        🎟️ Regular: ${{ showtime.price_regular }} | VIP: ${{ showtime.price_vip }}
+    </li>
+{% empty %}
+    <li>No showtimes available.</li>
+{% endfor %}
+</ul>
+
+<a href="/">⬅ Back to movies</a>
+
+</body>
+</html>

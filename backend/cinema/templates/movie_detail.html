@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ movie.title }}</h2>
+
+<p>Release: {{ movie.release_date }}</p>
+<p>Base price: ${{ movie.base_price }}</p>
+
+<h3>Sessions</h3>
+<ul>
+    {% for session in sessions %}
+        <li>
+            {{ session.start_time }}
+            <a href="{% url 'session-seats' session.id %}">Select seats</a>
+        </li>
+    {% empty %}
+        <li>No sessions yet</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

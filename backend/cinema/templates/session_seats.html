@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Select seats</h2>
+<h3>{{ session.movie.title }} – {{ session.start_time }}</h3>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="seats">
+        {% for seat in seats %}
+            <label class="seat {{ seat.type|lower }}">
+                <input type="checkbox" name="seats" value="{{ seat.id }}">
+                Row {{ seat.row }} Seat {{ seat.number }}
+            </label>
+        {% endfor %}
+    </div>
+
+    <button type="submit">Book seats</button>
+</form>
+{% endblock %}

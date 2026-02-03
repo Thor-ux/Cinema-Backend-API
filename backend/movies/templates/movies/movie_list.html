@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinema Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            padding: 40px;
+        }
+        .movie {
+            background: #222;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🎬 Now Showing</h1>
+
+{% for movie in movies %}
+    <div class="movie">
+        <h2>
+            <a href="/{{ movie.id }}/" style="color:#f5c518;">
+                {{ movie.title }}
+            </a>
+        </h2>
+        <p>{{ movie.description }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>
