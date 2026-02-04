@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from movies.views import movie_list, movie_detail
 from showtimes.views import session_seats
 
